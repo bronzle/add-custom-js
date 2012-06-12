@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" href="/css/popup.css">
+</head>
+<body>
+  <h1>Add Custom Javascript</h1>
+  <input placeholder="Title" class="title" id="js-title">
+  <input type="hidden" id="js-uuid">
+  <div class="top-buttons">
+    <button id="js-edit-button">JS</button>
+    <button id="css-edit-button">CSS</button>
+    <button id="js-regex-input">RegEx</button>
+    <button id="js-save-list-button">Saves</button>
+  </div>
+  <div class="edit-container">
+    <div id="js-for-this-page" class="editor"></div>
+    <div id="css-for-this-page" class="editor"></div>
+    <div class="editor regex-holder" id="regex-holder">
+      <div class="check" data-which="page">
+        <label for="">This page only</label>
+        <span></span>
+      </div>
+      <div class="check" data-which="domain">
+        <label for="">This Domain</label>
+        <span></span>
+      </div>
+      <div class="check" data-which="regex">
+        <label for="regex-content">Regex</label>
+        <input id="regex-content">
+      </div>
+    </div>
+    <div class="editor" id="js-save-list-container">
+      <ul id="js-save-list" class="save-list">
+      </ul>
+    </div>
+  </div>
+  <div class="bottom-buttons">
+    <label><input type="checkbox" id="include-jquery"> Include jQuery</label>
+    <label><input type="checkbox" id="exec-on-page-load"> Execute code on page load</label>
+    <div class="right">
+      <button id="js-clear-button">Clear</button>
+      <button id="js-save-button">Save</button>
+    </div>
+  </div>
+  <div id="js-error-container" class="error-container"><div class="error-message-center"><span class="error-message" id="js-error"></span></div></div>
+  <script src="/js/ace/src/ace.js"></script>
+  <script src="/js/ace/src/mode-javascript.js"></script>
+  <script src="/js/ace/src/mode-css.js"></script>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+{
+  "name": "Add Custom JS",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Add Custom JS",
+  "icons": {
+    "16": "gfx/add_custom_js_icon16.png",
+    "48": "gfx/add_custom_js_icon48.png",
+    "128": "gfx/add_custom_js_icon128.png"
+  },
+  "browser_action": {
+      "default_icon": "gfx/add_custom_js_icon19.png",
+      "default_title": "Add Custom JS",
+      "default_popup": "html/add_custom_js_popup.html"
+  },
+  "background": {
+    "page": "html/add_custom_js_background.html"
+  },
+  "chrome_url_overrides": {},
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/add_custom_js_content_script.js"]
+    }
+  ],
+  "permissions": [
+    "<all_urls>",
+    "unlimitedStorage",
+    "background",
+    "tabs",
+    "idle"
+  ]
+}

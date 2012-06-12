@@ -1,0 +1,229 @@
+body {
+/*  min-width: 600px;
+  min-height: 400px;*/
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  color: #242424;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+input:not([type]) {
+  border: 1px solid #707070;
+  background: #E9E9E9;
+  outline: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+input:not([type])::-webkit-input-placeholder {
+/*  color: #888; */
+}
+
+.title {
+  width: 100%;
+  margin: 10px auto !important;
+  font-size: 14px;
+  padding: 2px 0;
+}
+  
+.edit-container,
+.editor {
+  height: 300px;
+}
+  
+.edit-container {
+  position: relative;
+  padding: 10px 10px 10px 10px;
+  background: #D9D9D9;
+  width: 600px;
+  border-radius: 5px;
+}
+  
+.editor {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 600px;
+  background: white;
+}
+  
+.editor {
+  z-index: 1;
+  visibility: hidden;
+}
+  
+.editor.active {
+  z-index: 2;
+  visibility: visible;
+}
+
+.regex-holder {
+  padding: 10px 0;
+  height: 280px;
+}
+
+.regex-holder label {
+  padding: 0 0 5px 25px;
+  display: block;
+}
+
+.regex-holder input:not([type]) {
+  display: block;
+  margin: 0 auto;
+}
+
+.check {
+  height: 80px;
+  margin: 0 20px;
+  position: relative;
+}
+
+.check,
+.check label {
+  cursor: pointer;
+}
+
+.check:nth-child(2) {
+  margin: 10px 20px;
+}
+
+.check:hover {
+  background: #D0D0D0;
+}
+
+.check:hover:before,
+.check.active:before {
+  content:"\2713\0020";
+/*  color: #757575;*/
+  position: absolute;
+  left: 3px;
+  top: 0px;
+}
+
+
+.check:hover:before {
+  color: #909090;
+}
+
+.check.active {
+  background: #A0A0A0;
+}
+
+.check.active:before {
+  color: #E9E9E9;
+}
+
+.save-list {
+  list-style: none;
+  margin: 20px;
+  padding: 0;
+}
+
+.save-list a {
+  color: #304980;
+  text-decoration: none;
+}
+
+.save-list a:not(:last-child):hover {
+  text-decoration: underline;
+}
+
+.save-list a:last-child {
+  display: inline-block;
+  float: right;
+  font-size: 0.7em;
+  padding: 3px 5px;
+  border-radius: 9px;
+  width: 8px;
+  text-align: center;
+}
+
+.save-list a:last-child:hover {
+  color: #FFFFFF;
+  background: #304980;
+}
+
+.bottom-buttons {
+  margin: 10px 0 0 0;
+}
+
+.bottom-buttons label,
+.bottom-buttons input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.bottom-buttons .right {
+  float: right;
+}
+
+.bottom-buttons button {
+  font-size: 13px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.top-buttons {
+  margin-left: 15px;
+}
+
+.bottom-buttons button,
+.top-buttons button {
+  background: #F0F0F0;
+  border: none;
+  margin: 0;
+  width: 80px;
+  outline: none;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+}
+
+.bottom-buttons button {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.bottom-buttons button:hover,
+.top-buttons button.active:hover,
+.top-buttons button:hover {
+  background: #C8C8C8;
+}
+
+.top-buttons button.active {
+  background: #D9D9D9;
+}
+
+.bottom-buttons button:active {
+  background: #D9D9D9;
+}
+
+
+.error-container {
+  background: rgba(0,0,0,0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  z-index: 1000;
+  display: none;
+}
+
+.error-container.active {
+  display: table;
+}
+
+.error-message-center {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.error-message {
+  background: #FFFFFF;
+  padding: 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
